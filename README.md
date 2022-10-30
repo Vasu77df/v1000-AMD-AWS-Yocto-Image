@@ -131,7 +131,7 @@ You might ask, what are these machine codes? These are the code names AMD uses f
 ```bash
 $ source ./oe-init-build-env build-amd-v1000-awsiot-kirkstone
 ```
-- Append or replace these these variables in:
+- Append or replace these these variables in local.conf or replace the local.conf from the one seen in this repo:
 ```bash
 $ vim build-amd-v1000-awsiot-kirkstone/conf/local.conf
 DL_DIR ?= "\${TOPDIR}/../downloads"
@@ -205,3 +205,6 @@ hard drive you selected during the installation process.
 
 You will be presented with a console (serial or graphical) or a
 graphical user interface depending on the image and the target machine.
+
+If your t640 has a serial port, you can watch the boot messages. Eventually Linux will start a console on this device (i.e. the serial port). You can use a terminal emulator (such as`minicom`) to monitor the messages coming out of the serial port of your t640 on your host build machine. In my case I plugged a serial-to-USB dongle into the t640 and my Linux host. On my Linux host the USB console device appears at `/dev/ttyUSB2`
+. Using `/dev/ttyUSB2` as the port in `minicom`, and setting the communication parameters to `115200 8N1`
