@@ -131,7 +131,7 @@ You might ask, what are these machine codes? These are the code names AMD uses f
 ```bash
 $ source ./oe-init-build-env build-amd-v1000-awsiot-kirkstone
 ```
-- Append or replace these these variables in local.conf or replace the local.conf from the one seen in this repo:
+- Replace the local.conf from the one seen in this repo:
 ```bash
 $ vim build-amd-v1000-awsiot-kirkstone/conf/local.conf
 DL_DIR ?= "\${TOPDIR}/../downloads"
